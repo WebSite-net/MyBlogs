@@ -4,8 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Homepage</title>
+    <meta name="description" content="Sharing my thoughts about pillows.">
+    <title>My Blog</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        /* Header Animation */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            animation: slideDown 1s ease-out;
+        }
+
+        header:first-of-type:hover {
+            transform: scale(1.05);
+            /* Grows the article slightly on hover */
+        }
+
+        header:first-of-type {
+            transition: transform 0.3s ease;
+            /* Smooth transition effect */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header h1:first-of-type:hover {
+            transform: scale(1.05);
+            /* Grows the article slightly on hover */
+        }
+
+        header h1:first-of-type {
+            transition: transform 0.3s ease;
+            /* Smooth transition effect */
+        }
+
+        /* Navigation Animation */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        /* Main Content Animation */
+        main {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.5s ease;
+        }
+
+        article {
+            margin-bottom: 40px;
+        }
+
+        article h2 {
+            color: #333;
+            font-size: 1.8em;
+            animation: zoomIn 1s ease;
+        }
+
+        article h2:first-of-type:hover {
+            transform: scale(1.05);
+            /* Grows the article slightly on hover */
+        }
+
+        article h2:first-of-type {
+            transition: transform 0.3s ease;
+            /* Smooth transition effect */
+        }
+
+        article p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            animation: fadeInText 2s ease;
+        }
+
+        article p:first-of-type:hover {
+            transform: scale(1.05);
+            /* Grows the article slightly on hover */
+        }
+
+        article p:first-of-type {
+            transition: transform 0.3s ease;
+            /* Smooth transition effect */
+        }
+
+        /* Image Styling and Animation */
+        article img {
+            display: block;
+            /* Centers the image */
+            margin: 20px auto;
+            /* Centering the image */
+            width: 50%;
+            height: 25%;
+            transition: transform 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        article img:hover {
+            transform: scale(1.05);
+            /* Grows the image slightly on hover */
+        }
+
+        /* Footer Animation */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            animation: slideUp 1s ease-out;
+        }
+
+        footer:first-of-type:hover {
+            transform: scale(1.05);
+            /* Grows the article slightly on hover */
+        }
+
+        footer:first-of-type {
+            transition: transform 0.3s ease;
+            /* Smooth transition effect */
+        }
+
         /* Keyframes for animations */
         @keyframes slideDown {
             from {
@@ -75,87 +219,6 @@
             }
         }
 
-        @keyframes easeIn {
-            from {
-                opacity: 0;
-                /* Start invisible */
-                transform: rotate(45deg);
-                /* Keep the rotation */
-            }
-
-            to {
-                opacity: 1;
-                /* Fade in */
-                transform: rotate(45deg);
-                /* Keep the rotation */
-            }
-        }
-
-        body {
-            background-color: rgb(0, 142, 142);
-            margin: 0px;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 15px;
-            width: 400px;
-            text-align: left;
-            animation: slideDown 1s ease-out;
-            border: none;
-            border-bottom-right-radius: 45px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-            /* Optional to remove default margin */
-        }
-
-        header:first-of-type {
-            transition: transform 0.3s ease;
-            /* Smooth transition effect */
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        header h1:first-of-type {
-            transition: transform 0.3s ease;
-            /* Smooth transition effect */
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .menu button {
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-
-        .menu button:hover {
-            background-color: #f0f0f0;
-        }
-
         .btns {
             justify-content: center;
             /* Centers horizontally */
@@ -164,8 +227,6 @@
             display: flex;
             column-gap: 2rem;
             border-radius: 8px;
-            margin-top: 100px;
-            /* Adjust for header height */
         }
 
         .btn {
@@ -191,152 +252,72 @@
             color: #fff;
             transform: translateY(-7px);
         }
-
-        .btn img {
-            width: 300px;
-            height: 300px;
-            margin-top: 10px;
-            object-fit: cover;
-            border: none;
-            border-radius: 45px;
-        }
-
-        .curved-square {
-            width: 37vw;
-            height: 37vw;
-            background-color: #3e2b23;
-            border-radius: 20px;
-            transform: rotate(45deg);
-            position: fixed;
-            right: -18vw;
-            top: 13.7vh;
-            animation: easeIn 1s ease-out;
-        }
-
-        .circle {
-            width: 800px;
-            height: 800px;
-            background-color: #3e2b23;
-            border-radius: 50%;
-            position: fixed;
-            left: -400px;
-            bottom: -400px;
-            animation: slideDown 1s ease-out;
-        }
-
-        .circle2 {
-            width: 750px;
-            height: 750px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            position: fixed;
-            left: -400px;
-            bottom: -400px;
-            animation: slideDown 1s ease-out;
-        }
-
-        .circle3 {
-            width: 700px;
-            height: 700px;
-            background-color: #333;
-            border-radius: 50%;
-            position: fixed;
-            left: -400px;
-            bottom: -400px;
-            animation: slideDown 1s ease-out;
-        }
-
-
-        .container {
-            position: relative;
-            /* Make container the positioning reference */
-            animation: slideDown 1s ease-out;
-        }
-
-        .letters {
-            position: absolute;
-            top: -24vw;
-            /* Adjust this to control the distance between letters and square */
-            right: -4vw;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            /* Stack letters vertically */
-            align-items: center;
-            /* Center letters horizontally */
-            gap: 50px;
-            /* Adjust spacing between letters */
-        }
-
-        .letters span {
-            font-size: 50px;
-            font-weight: bold;
-            color: #ffffff;
-            /* Change the letter color as needed */
-        }
-
-        .logo img {
-            position: absolute;
-            top: -11vw;
-            right: 5vw;
-            width: 16%;
-            height: auto;
-        }
-
-        .global img {
-            position: absolute;
-            bottom: -23vw;
-            left: -3vw;
-            width: 15%;
-            height: auto;
-            animation: slideDown 1s ease-out;
-        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Welcome to My Blog</h1>
-        <p>Please select which blog you would like to visit:</p>
+        <h1>Blog Post 1: The Global Journey of My Pillow</h1>
+        <p>Sharing my thoughts about pillows</p>
     </header>
 
-    <div class="btns">
-        <button class='btn' onclick="window.location.href='Blog.html'">
-            <div class="btn-text">Go to Blog 1</div>
-            <img src="images/Blog.JPG" alt="Blog 1">
-        </button>
-        <button class='btn' onclick="window.location.href='Blog2.html'">
-            <div class="btn-text">Go to Blog 2</div>
-            <img src="images/Blog2.JPG" alt="Blog 2">
-        </button>
-    </div>
-
-    <div class="curved-square"></div>
-
-    <div class="circle"></div>
-    <div class="circle2"></div>
-    <div class="circle3"></div>
-
-
-    <div class="container">
-        <div class="letters">
-            <span>N</span>
-            <span>A</span>
-            <span>I</span>
-            <span>R</span>
-            <span>O</span>
-            <span>U</span>
-            <span>Z</span>
+    <nav>
+        <div class="btns">
+            <button class="btn"
+                onclick="window.location.href='https:storables.com/articles/where-are-pillows-made/'">Source</button>
+            <!--<button class="btn">Source</button>
+            <button class="btn">Source</button>-->
         </div>
+    </nav>
 
-        <div class="logo">
-            <img src="images/Logo.png" alt="Mcmaster Logo">
-        </div>
+    <main>
+        <article>
+            <h2>How my pillow connects to world</h2>
+            <p>Today, I’m going to talk about something we all have, but don’t usually think about: my pillow.
+                It’s soft, comfy, and essential for a good night’s sleep. What does it have to do with
+                globalization? Hello, my name is Nairouz Sido and welcome to my first blog post! Today we
+                will explore how my pillow became the pillow that I know of. Before I go into the specifics,
+                what is globalization? According to my lectures on globalization, different academic disciplines
+                have different definitions of what globalization is. Although it lacks a clear "definition," many
+                scholars can agree that it shares certain similar elements, including interconnectivity, the
+                strengthening of international ties, and the cross-border movement of people, goods, and ideas.
+                Globalization is made possible in large part by technological developments in information
+                sharing, communication, and transportation. (Stockdale, 2024). </p>
+        </article>
 
-        <div class="global">
-            <img src="images/global.png" alt="Globalization">
-        </div>
+        <article>
+            <h2>So, let’s take a look at my pillow:</h2>
+            <img src="pillow.jpg" alt="picture of a pillow" title="pillow picture">
+        </article>
+
+        <article>
+            <p>So what's the connection between globalization and a pillow? The materials used to make my
+                pillow came from different areas of the world: the synthetic polyester stuffing was sourced from
+                a factory in China, the cotton cover was made in India, and the pillow itself was built in
+                Vietnam. It finally made it to the store where I bought it here in Canada after traveling across
+                oceans (Campbell, 2024). The journey is a reflection of the vast worldwide supply systems that
+                our class has been learning. My pillow would not be around today if international trade hadn't
+                been coordinated. Many nations were engaged in the production of the finished product, from
+                raw materials to it, demonstrating the interdependence that globalization symbolizes. Crossborder trade
+                in goods, services, and technology connects economies and communities in ways
+                that are frequently invisible. However, there are environmental consequences associated with
+                international shipping, such as resource usage and carbon emissions. Positively, globalization
+                makes it possible for citizens of other countries to engage in the global economy, creating jobs in
+                the manufacturing, transportation, and retail industries. Despite its apparent simplicity, my
+                pillow stands for the worldwide connection that characterizes contemporary life. The next time I
+                go to sleep, I'll consider the long journey my pillow traveled, which will serve as a reminder of
+                the complex ties that underlie everyday items.</p>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+        <p>Nairouz Sido</p>
+        <p><a href="Document.docx" class="download-button" download>Reference</a></p>
+    </footer>
+
 </body>
 
 </html>
